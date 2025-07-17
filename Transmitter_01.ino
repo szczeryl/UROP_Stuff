@@ -160,5 +160,5 @@ void loop() {
         Serial.println("Data not ready yet");
     }
     
-    delay(5000);  // Wait 5 seconds between measurements
+    delay(5000);  
 }
