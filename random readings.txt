@@ -1,0 +1,65 @@
+15:11:19.155 -> PM2.5 read failed
+15:11:19.155 -> CO2: 548ppm, Temp: 23.57°C, RH: 69.14%
+15:11:19.155 -> 
+15:11:19.198 -> Last Packet Send Status:	Delivery Fail
+15:11:24.157 -> PM2.5 read failed
+15:11:24.157 -> CO2: 548ppm, Temp: 23.60°C, RH: 69.15%
+15:11:24.197 -> 
+15:11:24.197 -> Last Packet Send Status:	Delivery Fail
+15:11:29.142 -> PM2.5: 38 μg/m³
+15:11:29.142 -> CO2: 548ppm, Temp: 23.59°C, RH: 69.07%
+15:11:29.190 -> 
+15:11:29.190 -> Last Packet Send Status:	Delivery Fail
+15:11:34.152 -> PM2.5 read failed
+15:11:34.152 -> CO2: 549ppm, Temp: 23.60°C, RH: 69.08%
+15:11:34.202 -> 
+15:11:34.202 -> Last Packet Send Status:	Delivery Fail
+15:13:32.664 -> PM2.5: 118 μg/m³
+15:13:32.697 -> 
+15:13:32.697 -> Last Packet Send Status:	Delivery Fail
+15:13:37.647 -> PM2.5: 118 μg/m³
+15:13:37.647 -> CO2: 1363ppm, Temp: 25.56°C, RH: 60.51%
+15:13:37.695 -> 
+15:13:37.695 -> Last Packet Send Status:	Delivery Fail
+15:13:42.670 -> PM2.5: 128 μg/m³
+15:13:42.670 -> CO2: 1493ppm, Temp: 25.30°C, RH: 62.17%
+15:13:42.710 -> 
+15:13:42.710 -> Last Packet Send Status:	Delivery Fail
+15:13:47.650 -> PM2.5: 162 μg/m³
+15:13:47.682 -> CO2: 1455ppm, Temp: 25.13°C, RH: 62.80%
+15:13:47.682 -> 
+15:13:47.682 -> Last Packet Send Status:	Delivery Fail
+
+
+15:11:19.155 -> PM2.5 read failed
+15:11:19.155 -> CO2: 548ppm, Temp: 23.57°C, RH: 69.14%
+15:11:19.155 -> 
+15:11:19.198 -> Last Packet Send Status:	Delivery Fail
+15:11:24.157 -> PM2.5 read failed
+15:11:24.157 -> CO2: 548ppm, Temp: 23.60°C, RH: 69.15%
+15:11:24.197 -> 
+15:11:24.197 -> Last Packet Send Status:	Delivery Fail
+15:11:29.142 -> PM2.5: 38 μg/m³
+15:11:29.142 -> CO2: 548ppm, Temp: 23.59°C, RH: 69.07%
+15:11:29.190 -> 
+15:11:29.190 -> Last Packet Send Status:	Delivery Fail
+15:11:34.152 -> PM2.5 read failed
+15:11:34.152 -> CO2: 549ppm, Temp: 23.60°C, RH: 69.08%
+15:11:34.202 -> 
+15:11:34.202 -> Last Packet Send Status:	Delivery Fail
+15:13:32.664 -> PM2.5: 118 μg/m³
+15:13:32.697 -> 
+15:13:32.697 -> Last Packet Send Status:	Delivery Fail
+15:13:37.647 -> PM2.5: 118 μg/m³
+15:13:37.647 -> CO2: 1363ppm, Temp: 25.56°C, RH: 60.51%
+15:13:37.695 -> 
+15:13:37.695 -> Last Packet Send Status:	Delivery Fail
+15:13:42.670 -> PM2.5: 128 μg/m³
+15:13:42.670 -> CO2: 1493ppm, Temp: 25.30°C, RH: 62.17%
+15:13:42.710 -> 
+15:13:42.710 -> Last Packet Send Status:	Delivery Fail
+15:13:47.650 -> PM2.5: 162 μg/m³
+15:13:47.682 -> CO2: 1455ppm, Temp: 25.13°C, RH: 62.80%
+15:13:47.682 -> 
+15:13:47.682 -> Last Packet Send Status:	Delivery Fail
+
