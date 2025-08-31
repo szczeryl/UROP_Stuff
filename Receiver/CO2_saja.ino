@@ -3,13 +3,11 @@
 #include <WiFi.h>
 #include <math.h> // to handle isnan()
 
-// Define multiple relay pins
 #define RELAY_PIN_1 25 //fan
 #define RELAY_PIN_2 26 //light
 #define RELAY_PIN_3 27 //pump
 
-// CO2 Threshold and averaging parameters
-#define CO2_THRESHOLD 1000.0 // ppm
+#define CO2_THRESHOLD 1000.0  //ppm
 #define REQUIRED_CONSECUTIVE_READINGS 3
 #define NUM_AVERAGE_READINGS 20
 
