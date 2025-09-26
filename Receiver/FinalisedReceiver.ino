@@ -1,14 +1,14 @@
-//COM 4 - Combined Receiver for PM2.5 and CO2 with Averaging
+//COM 4 Port
 #include <esp_now.h>
 #include <WiFi.h>
 #include <math.h> // to handle isnan()
 
-// Define multiple relay pins
+// set gpio pins 
 #define RELAY_PIN_1 25 //fan
 #define RELAY_PIN_2 26 //light
 #define RELAY_PIN_3 27 //pump
 
-// Threshold parameters
+// Threshold for pm2.5 and co2
 #define PM_THRESHOLD 12.0
 #define CO2_THRESHOLD 1000.0 // ppm
 #define REQUIRED_CONSECUTIVE_READINGS 3
@@ -22,7 +22,7 @@ typedef struct struct_message {
     uint16_t pm25_env;
 } struct_message;
 
-// Arrays for both PM2.5 and CO2 averaging
+// arrays for pm2.5 and co2
 float pmReadings[NUM_AVERAGE_READINGS];
 float co2Readings[NUM_AVERAGE_READINGS];
 int pmReadingIndex = 0;
@@ -30,11 +30,11 @@ int co2ReadingIndex = 0;
 int pmValidReadings = 0;
 int co2ValidReadings = 0;
 
-// Counters for both sensors
+// counters for pm2.5 and co2
 uint8_t pmHighCount = 0;
 uint8_t co2HighCount = 0;
 
-// Relay states
+// set everything off 
 bool relayState1 = false;  // fan
 bool relayState2 = false;  // light
 bool relayState3 = false;  // pump
@@ -84,7 +84,7 @@ void processPM25Data(uint16_t pm25_value) {
             Serial.print(averagePM25);
             Serial.println(" μg/m³");
 
-            // PM2.5 threshold logic
+            // if higher than threshold; logic 
             if (averagePM25 > PM_THRESHOLD) {
                 pmHighCount++;
                 Serial.print("PM High Count: ");
@@ -144,7 +144,7 @@ void processCO2Data(uint16_t co2_value) {
 }
 
 void activateRelays(const char* reason) {
-    // Turn ON all relays if not already on
+    // if not ON, Turn ON all relays 
     if (!relayState1) {
         digitalWrite(RELAY_PIN_1, HIGH);
         relayState1 = true;
@@ -169,7 +169,7 @@ void activateRelays(const char* reason) {
 }
 
 void checkDeactivateRelays(const char* reason) {
-    // Only turn OFF relays if BOTH sensors are below threshold
+    // Only turn OFF relays if both co2 and pm2.5 below threshold 
     if (pmHighCount == 0 && co2HighCount == 0) {
         if (relayState1) {
             digitalWrite(RELAY_PIN_1, LOW);
@@ -200,14 +200,14 @@ void OnDataRecv(const esp_now_recv_info_t *esp_now_info, const uint8_t *incoming
     memcpy(&receivedData, incomingData, sizeof(receivedData));
 
     if (data_len == sizeof(struct_message)) {
-        // Process PM2.5 data
+        // final PM2.5 data
         if (!isnan(receivedData.pm25_env) && receivedData.pm25_env > 0) {
             processPM25Data(receivedData.pm25_env);
         } else {
             Serial.println("Invalid PM2.5 reading received");
         }
 
-        // Process CO2 data
+        // final CO2 data
         if (!isnan(receivedData.co2Concentration) && receivedData.co2Concentration > 0) {
             processCO2Data(receivedData.co2Concentration);
         } else {
